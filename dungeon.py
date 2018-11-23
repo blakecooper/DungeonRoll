@@ -14,7 +14,7 @@ args = parser.parse_args()
 def rollOnTable(table):
     dieValue = randint(1, 20)
     if dieValue != 20:
-        return table[dieValue][0:(len(table[dieValue])-1)]
+        return table[dieValue-1][0:(len(table[dieValue-1])-1)]
     else:
         return rollOnTable(table) + ', ' + rollOnTable(table)
 
